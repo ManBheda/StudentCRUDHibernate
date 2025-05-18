@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <display-name>Student CRUD Hibernate App</display-name>
+
+    <!-- Session Timeout -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Main Student Servlet -->
+    <servlet>
+        <servlet-name>StudentServlet</servlet-name>
+        <servlet-class>com.studentapp.servlet.StudentServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentServlet</servlet-name>
+        <url-pattern>/students</url-pattern>
+    </servlet-mapping>
+
+    <!-- Add Student Servlet -->
+    <servlet>
+        <servlet-name>StudentAddServlet</servlet-name>
+        <servlet-class>com.studentapp.servlet.StudentAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentAddServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <!-- Update Student Servlet -->
+    <servlet>
+        <servlet-name>StudentUpdateServlet</servlet-name>
+        <servlet-class>com.studentapp.servlet.StudentUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentUpdateServlet</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+
+    <!-- Delete Student Servlet -->
+    <servlet>
+        <servlet-name>StudentDeleteServlet</servlet-name>
+        <servlet-class>com.studentapp.servlet.StudentDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudentDeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <!-- Welcome File -->
+    <welcome-file-list>
+        <welcome-file>students</welcome-file>
+    </welcome-file-list>
+</web-app>
